@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #29343a;
+}
+
+button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    color: white;
+    background-color: #779eb2;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 120%;
+    font-weight: 700;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color: #365563;
+    border: 3px solid #779eb2;
+    box-shadow: 0 0 20px #8eb1c2;
+}
+
+.content .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+/* Home Page */
+section{
+    width: 100%;
+    min-height: 90vh;
+}
+
+section .home{
+    display: flex;
+    justify-content: space-between;
+    padding: 120px;;
+    align-items: center;
+}
+
+.home .image{
+    width: 500px;
+    height: 60vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 70px #8eb1c2;
+    margin-right: 75px;
+}
+.home .image img{
+    width: 100%;
+}
+
+.home .content{
+    color: white;
+    width: 50%;
+}
+
+.content h1{
+    font-size: 50px;
+}
+
+.content h1 span{
+    color: #779eb2;
+    text-shadow: 0 0 5px #8eb1c2;
+}
+
+.content .description{
+    font-size: 20px;
+    margin: 10px 0;
+}
