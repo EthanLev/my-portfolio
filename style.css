@@ -41,6 +41,25 @@ button:hover{
     margin-top: 25px;
 }
 
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(85, 84, 84); /*#365563;  scroll bar background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b6977; /* scroll bar */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #617d8b; /* scroll bar hover */
+}
+
 /* Navigation Bar */
 nav{
     width: 100%;
@@ -120,13 +139,11 @@ section .home{
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0 0 70px #8eb1c2;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    margin-right: 75px;
 }
 
 .home .image img{
-    width: 110%;
+    width: 100%;
 }
 
 .home .content{
