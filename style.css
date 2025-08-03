@@ -47,17 +47,17 @@ button:hover{
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(85, 84, 84); /*#365563;  scroll bar background */
+    background: rgb(85, 84, 84); 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4b6977; /* scroll bar */
+    background: #4b6977; 
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #617d8b; /* scroll bar hover */
+    background: #617d8b; 
 }
 
 /* Navigation Bar */
@@ -234,4 +234,8 @@ section .home{
 
 .social-links .github:before {
     background-color: #424242;
+}
+
+.social-links .artstation:before {
+    background-color: #0075b4;
 }
