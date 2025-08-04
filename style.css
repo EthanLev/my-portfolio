@@ -239,3 +239,50 @@ section .home{
 .social-links .artstation:before {
     background-color: #0075b4;
 }
+
+
+/* Contact Me */
+.contact {
+    
+}
+
+.contact .content {
+    margin: 0 auto;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .text {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.contact .button {
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    background: #365563;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+
+footer .text span a {
+    font-weight: 500;
+    color: white;
+}
+
+footer .text span a:hover {
+    text-decoration: underline;
+}
