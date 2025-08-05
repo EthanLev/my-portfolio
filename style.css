@@ -41,6 +41,7 @@ button:hover{
     margin-top: 25px;
 }
 
+
 /* Custom Scroll Bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -59,6 +60,7 @@ button:hover{
 ::-webkit-scrollbar-thumb:hover {
     background: #617d8b; 
 }
+
 
 /* Navigation Bar */
 nav{
@@ -119,6 +121,7 @@ nav{
     text-shadow: 0 0 12px #8eb1c2    ;
     color: #779eb2;
 }
+
 
 /* Home Page */
 section{
@@ -238,6 +241,87 @@ section .home{
 
 .social-links .artstation:before {
     background-color: #0075b4;
+}
+
+
+/* About Section */
+section .content {
+    width: 80%;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before, 
+section .title span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-details .left {
+    width: 45%;
+}
+
+.about .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details .right {
+    width: 55%;
+}
+
+section .topic {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details .right p {
+    text-align: justify;
+    color: white;
+}
+
+section .button {
+    margin: 16px 0;
+}
+
+section .button button {
+    padding: 8px 16px;
 }
 
 
