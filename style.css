@@ -324,6 +324,79 @@ section .button button {
     padding: 8px 16px;
 }
 
+/* Skills Section */
+.skills {
+    /*background: black;*/
+}
+
+.skills .content {
+    padding: 40px 0;
+}
+
+.skills .skills-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-details .text {
+    width: 50%;
+}
+
+.skills-details p {
+    color: white;
+    text-align: justify;
+}
+
+.skills .skills-details .experience {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.skills-details .experience .num {
+    color: white;
+    font-size: 90px;
+}
+
+.skills-details .experience .exp {
+    color: white;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+
+.skills-details .boxes {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-details .box {
+    width: calc(100% / 3 - 20px);
+    margin: 20px 0;
+    border: 4px solid #446879;
+    border-radius: 20px;
+}
+
+.skills-details .boxes .topic {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.skills-details .boxes i {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding-bottom: 10px; 
+}
+
 
 /* Contact Me */
 .contact {
