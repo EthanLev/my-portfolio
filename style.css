@@ -345,11 +345,22 @@ section .button button {
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 32px #8eb1c2;
 }
 
 .card img{
     width: 100%;
     height: auto;
+    transition: filter 0.3s;
+}
+
+.card:hover img {
+    filter: brightness(1.1) saturate(1.2);
 }
 
 .content{
@@ -361,17 +372,17 @@ section .button button {
     margin-bottom: 8px;
     text-align: center;
     color: white;
+    transition: color 0.3s;
+}
+
+.card:hover .content h3 {
+    color: #779eb2;
 }
 
 .card-container .content p{
     color: white;
     font-size: 16px;
     line-height: 1.3;
-}
-
-.content .project-btn{
-    padding: 8px 16px;
-    margin-top: 16px;
 }
 
 /* Skills Section */
@@ -476,7 +487,6 @@ footer {
     background: #365563;
     padding: 15px 0;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
 }
 
 footer .text span {
