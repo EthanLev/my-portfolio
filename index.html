@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,19 +31,29 @@
             </div>
         </div>
     </nav>
+
     <!-- Home Page -->
     <section>
         <div class="home" id="home">
             <div class="image">
-                <img src="images/ethan.png" alt="#">"
+                <img src="images/ethan.png" alt="">"
             </div>
             <div class="content">
-                <h1> Hi, I'm <span>Ethan</span></h1>
+                <h1 data-aos="fade-left">
+                    Hi, I'm
+                    <span> Ethan </span>
+                </h1>
 
                 <!-- Description -->
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ea voluptates laboriosam possimus! Ut ipsam ratione corporis dolor iure? Maxime ex exercitationem facilis neque pariatur tenetur deserunt corporis ipsum delectus!</p>
+                <div class="typewriter">
+                    I'm a
+                    <span id="typewriter-text" class="typewriter-text"> </span>
+                    <label for=""> | </label>
                 </div>
+
+                <p>
+                    I am a full stack developer with experience building games, programs, and websites including this portfolio.
+                </p>
 
                 <!-- Social Buttons -->
                 <div class="social-links">
@@ -239,5 +249,7 @@
             </span>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

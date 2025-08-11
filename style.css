@@ -162,7 +162,7 @@ section .home{
 }
 
 .content h1{
-    font-size: 50px;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
 }
 
 .content h1 span{
@@ -170,8 +170,28 @@ section .home{
     text-shadow: 0 0 5px #8eb1c2;
 }
 
-.content .description{
-    font-size: 20px;
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: #779eb2;
+    text-shadow: 0 0 10px #8eb1c2;
+}
+
+.typewriter label{
+    animation: blink 1s step-end infinite;
+    color: white;
+}
+
+@keyframes blink{
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1.25rem);
     margin: 10px 0;
 }
 
@@ -193,7 +213,7 @@ section .home{
     height: 80px;
     background-color: white;
     text-align: center;
-    line-height: 80px;
+    line-height: 75px;
     font-size: 40px;
     margin: 0 10px;
     display: block;
