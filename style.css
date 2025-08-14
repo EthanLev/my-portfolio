@@ -133,10 +133,6 @@ nav{
 section{
     width: 100%;
     min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 section .home{
@@ -280,8 +276,8 @@ section .home{
 /* About Section */
 section .content {
     width: 80%;
-    margin: 0 auto;
-    max-width: 900px;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
 }
 
 .about .about-details {
@@ -529,23 +525,4 @@ footer .text span a {
 
 footer .text span a:hover {
     text-decoration: underline;
-}
-
-
-@media (max-width: 900px) {
-    section .home {
-        flex-direction: column;
-        padding: 30px 10px;
-        gap: 20px;
-    }
-    .home .image {
-        margin-right: 0;
-        margin-bottom: 20px;
-        width: 250px;
-        height: 250px;
-    }
-    .home .content {
-        width: 100%;
-        margin: 0;
-    }
 }
