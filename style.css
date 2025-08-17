@@ -1,3 +1,6 @@
+/* ===========================
+   Global Styles & Resets
+   =========================== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 *{
@@ -15,9 +18,11 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #29343a;
-    
 }
 
+/* ===========================
+   Button Styles
+   =========================== */
 button{
     width: 45%;
     height: 6vh;
@@ -47,8 +52,9 @@ button:hover{
     margin-top: 25px;
 }
 
-
-/* Custom Scroll Bar */
+/* ===========================
+   Custom Scroll Bar
+   =========================== */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -67,8 +73,9 @@ button:hover{
     background: #617d8b; 
 }
 
-
-/* Navigation Bar */
+/* ===========================
+   Navigation Bar
+   =========================== */
 nav{
     width: 100%;
     height: 10vh;
@@ -108,6 +115,7 @@ nav{
     transition: 0.3s linear;
 }
 
+/* Underline animation for nav links on hover */
 .nav-container .links a::before{
     position: absolute;
     content: "";
@@ -124,12 +132,13 @@ nav{
 }
 
 .nav-container .links a:hover {
-    text-shadow: 0 0 12px #8eb1c2    ;
+    text-shadow: 0 0 12px #8eb1c2;
     color: #779eb2;
 }
 
-
-/* Home Page */
+/* ===========================
+   Home Page (Hero Section)
+   =========================== */
 section{
     width: 100%;
     min-height: 90vh;
@@ -145,6 +154,7 @@ section .home{
     gap: 40px; 
 }
 
+/* Circular profile image with shadow */
 .home .image{
     width: 500px;
     height: 70vh;
@@ -173,16 +183,38 @@ section .home{
     text-shadow: 0 0 5px #8eb1c2;
 }
 
+/* ===========================
+   Typewriter Effect Styling
+   ===========================
+   - Keeps the animated text on a single line for large screens.
+   - Uses responsive font sizing.
+   - Allows wrapping on small screens for better mobile experience.
+*/
 .content .typewriter{
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
+    display: block;
+    width: auto;
+    min-width: fit-content;
+    white-space: nowrap; /* Prevents wrapping by default */
 }
 
+/* Responsive: Allow typewriter text to wrap on small screens */
+@media (max-width: 600px) {
+    .content .typewriter {
+        white-space: normal;
+        min-width: 0;
+    }
+}
+
+/* Highlight and glow for animated typewriter text */
 .content .typewriter-text{
     color: #779eb2;
     text-shadow: 0 0 10px #8eb1c2;
+    white-space: nowrap;
 }
 
+/* Blinking cursor animation for typewriter effect */
 .typewriter label{
     animation: blink 1s step-end infinite;
     color: white;
@@ -198,7 +230,11 @@ section .home{
     margin: 10px 0;
 }
 
-/* Social Links */
+/* ===========================
+   Social Links
+   ===========================
+   - Animated icon backgrounds and brand colors
+*/
 .social-links ul{
     padding-top: 50px;
     display: flex;
@@ -234,11 +270,13 @@ section .home{
     z-index: 3;
 }
 
+/* Icon spin and color change on hover */
 .social-links ul li a:hover .icon {
     color: white;
     transform:rotateY(360deg);
 }
 
+/* Animated background reveal for social icons */
 .social-links ul li a:before {
     content: "";
     position: absolute;
@@ -255,7 +293,7 @@ section .home{
     top: 0;
 }
 
-/* Brand-specific background colors */
+/* Brand-specific background colors for social icons */
 .social-links .youtube:before {
     background-color: #dd0000;
 }
@@ -272,8 +310,9 @@ section .home{
     background-color: #0075b4;
 }
 
-
-/* About Section */
+/* ===========================
+   About Section
+   =========================== */
 section .content {
     width: 80%;
     margin: 0px auto;
@@ -300,6 +339,7 @@ section .title span {
     padding-bottom: 8px;
 }
 
+/* Underline effect for section titles */
 section .title span::before, 
 section .title span::after {
     content: '';
@@ -353,7 +393,11 @@ section .button button {
     padding: 8px 16px;
 }
 
-/* Projects Section */
+/* ===========================
+   Projects Section
+   ===========================
+   - Card hover effect for elevation and image pop
+*/
 .card-container{
     display: flex;
     justify-content: center;
@@ -408,11 +452,11 @@ section .button button {
     line-height: 1.3;
 }
 
-/* Skills Section */
-.skills {
-    
-}
-
+/* ===========================
+   Skills Section
+   ===========================
+   - 3-column responsive skill boxes
+*/
 .skills .content {
     padding: 40px 0;
 }
@@ -481,12 +525,9 @@ section .button button {
     padding-bottom: 10px; 
 }
 
-
-/* Contact Me */
-.contact {
-    
-}
-
+/* ===========================
+   Contact Section
+   =========================== */
 .contact .content {
     margin: 0 auto;
     padding: 30px 0;
@@ -504,8 +545,9 @@ section .button button {
     text-align: center;
 }
 
-
-/* Footer */
+/* ===========================
+   Footer
+   =========================== */
 footer {
     background: #365563;
     padding: 15px 0;
@@ -523,6 +565,7 @@ footer .text span a {
     color: white;
 }
 
+/* Underline effect for footer links on hover */
 footer .text span a:hover {
     text-decoration: underline;
 }
