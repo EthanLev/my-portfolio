@@ -151,17 +151,17 @@ section .home{
     padding: 40px 20px;           
     max-width: 1100px;            
     margin: 0 auto;               
-    gap: 40px; 
+    gap: 50px; 
 }
 
-/* Circular profile image with shadow */
+/* Profile image with shadow */
 .home .image{
     width: 500px;
     height: 70vh;
-    border-radius: 100%;
+    border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 70px #8eb1c2;
-    margin-right: 75px;
+    display: flex;
 }
 
 .home .image img{
@@ -193,25 +193,13 @@ section .home{
 .content .typewriter{
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
-    display: block;
-    width: auto;
-    min-width: fit-content;
-    white-space: nowrap; /* Prevents wrapping by default */
 }
 
-/* Responsive: Allow typewriter text to wrap on small screens */
-@media (max-width: 600px) {
-    .content .typewriter {
-        white-space: normal;
-        min-width: 0;
-    }
-}
 
 /* Highlight and glow for animated typewriter text */
 .content .typewriter-text{
     color: #779eb2;
     text-shadow: 0 0 10px #8eb1c2;
-    white-space: nowrap;
 }
 
 /* Blinking cursor animation for typewriter effect */
