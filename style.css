@@ -25,11 +25,16 @@ section{
     padding: 80px 0 40px; /* Top padding for fixed header */
 }
 
+.container{
+    max-width: 1200px; /* Don't let content get too wide on large screens */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 40px; /* Add some padding on the sides */
+}
+
 header{
     background-color: #37444b;
-    backdrop-filter: blur(10px); /* Frosted glass effect */
     position: fixed; /* Keeps header at top of screen when scrolling */
-    top: 0; /* Position at very top of screen */
+    top: 0; /* Position at top of screen */
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -101,58 +106,36 @@ nav{
     padding: 1rem 0; /* Add vertical padding */
 }
 
-.nav-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #37444b;
-}
-
+/* LOGO */
 .logo{
-    color: white;
     font-size: 2.5rem;
     font-weight: bold;
-}
-
-.logo span{
     color: #779eb2;
     text-shadow: 0 0 12px #8eb1c2;
 }
 
-.nav-container .links{
+/* NAVIGATION MENU */
+.nav-links{
     display: flex;
-    gap: 2.5rem;
+    gap: 2.5rem; /* Space between links */
 }
 
-.nav-container .links a{
-    position: relative;
-    font-size: 1.2rem;
-    color: white;
+.nav-links a{
+    color: #ffffff;
     font-weight: 550;
-    transition: 0.3s linear;
+    font-size: 1.3rem;
+    transition: all 0.5s ease;
 }
 
-/* Underline animation for nav links on hover */
-.nav-container .links a::before{
-    position: absolute;
-    content: "";
-    bottom: -3px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background-color: #537d90;
-    transition: 0.15s linear;
-}
-
-.nav-container .links a:hover::before{
-    width: 100%;
-}
-
-.nav-container .links a:hover {
-    text-shadow: 0 0 12px #8eb1c2;
+.nav-links a:hover{
+    text-shadow: 0 0 8px #8eb1c2;
     color: #779eb2;
+}
+
+/* SECTION */
+section{
+    min-height: 100vh; /* Full viewport height */
+    padding: 80px 0 40px; /* Top padding for fixed header */
 }
 
 /* ===========================
@@ -164,68 +147,75 @@ nav{
     color: #ffffff;
 }
 
-.home{
-    display: flex;
-    justify-content: center;      
-    align-items: center;          
-    padding: 40px 20px;           
-    max-width: 1100px;            
-    margin: 0 auto;               
-    gap: 50px; 
-}
-
-/* Profile image with shadow */
-.home .image{
-    width: 500px;
-    height: 70vh;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 70px #8eb1c2;
-    display: flex;
-}
-
-.home .image img{
+.home-content{
+    display: grid;
+    grid-template-columns: 400px 1fr; /* Two columns, fixed width for image */
+    gap: 4rem;
+    align-items: center; 
     width: 100%;
 }
 
-.home .content{
-    color: white;
-    width: 50%;
-    margin: 5%;
+/* HOME LEFT */
+.home-content .home-left{
+    width: 100%;              /* Full width of its container */
+    max-width: 400px;         /* Don't get too large */
+    height: 600px;            /* Fixed height for consistent appearance */
+    border-radius: 50%;      
+    object-fit: cover;        /* Crop image to fit circle without distortion */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Dramatic shadow */
+    border: 5px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+    overflow: hidden; /* Ensure image stays within circle */
 }
 
-.content h1{
-    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+.home-content .home-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Move image up */
+    transform: scale(1.25);      /* Zoom in */
 }
 
-.content h1 span{
+/* HOME RIGHT */
+.home-content .home-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.home-content .home-right h1{
+    font-size: 3.5rem;    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    animation: fadeInUp 2s ease;
+}
+
+.home-content .home-right h1 span{
     color: #779eb2;
-    text-shadow: 0 0 5px #8eb1c2;
+    text-shadow: 0 0 15px #8eb1c2;
+}
+
+.home-content .home-right p{
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin: 10px 0; /* Need? */
 }
 
 /* ===========================
    Typewriter Effect Styling
-   ===========================
-   - Keeps the animated text on a single line for large screens.
-   - Uses responsive font sizing.
-   - Allows wrapping on small screens for better mobile experience.
-*/
-.content .typewriter{
+   =========================== */
+.home-content .typewriter{
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
 }
 
-
-/* Highlight and glow for animated typewriter text */
-.content .typewriter-text{
+.home-content .typewriter-text{
     color: #779eb2;
     text-shadow: 0 0 10px #8eb1c2;
 }
 
-/* Blinking cursor animation for typewriter effect */
 .typewriter label{
     animation: blink 1s step-end infinite;
-    color: white;
+    color: white
 }
 
 @keyframes blink{
@@ -243,8 +233,14 @@ nav{
    ===========================
    - Animated icon backgrounds and brand colors
 */
+.social-links{
+    display: flex;
+    gap: 1.5rem; /* Space between icons */
+    animation: fadeInUp 1s ease 0.7s both; 
+}
+
 .social-links ul{
-    padding-top: 50px;
+    padding-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,11 +252,11 @@ nav{
 }
 
 .social-links ul li a{
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background-color: white;
     text-align: center;
-    line-height: 75px;
+    line-height: 85px;
     font-size: 40px;
     margin: 0 10px;
     display: block;
@@ -334,9 +330,11 @@ section .content {
 }
 
 section .title {
-    display: flex;
+    font-size: 2.5rem;     
+    margin-bottom: 2rem;   
+    color: #779eb2;     
+    text-align: center;
     justify-content: center;
-    margin-bottom: 40px;
 }
 
 section .title span {
@@ -421,6 +419,7 @@ section .button button {
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     margin: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    
 }
 
 .card:hover {
@@ -438,11 +437,11 @@ section .button button {
     filter: brightness(1.1) saturate(1.2);
 }
 
-.content{
+.card .content{
     padding: 16px;
 }
 
-.content h3{
+.card .content h3{
     font-size: 28px;
     margin-bottom: 8px;
     text-align: center;
@@ -462,9 +461,7 @@ section .button button {
 
 /* ===========================
    Skills Section
-   ===========================
-   - 3-column responsive skill boxes
-*/
+   =========================== */
 .skills .content {
     padding: 40px 0;
 }

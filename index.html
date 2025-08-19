@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ethan Levesque - Software Engineer</title>
     <link rel="stylesheet" href="style.css">
 
     <!-- Icon Library -->
@@ -17,11 +17,11 @@
     <!-- Header -->
     <header>
         <!-- Navigation -->
-        <nav class="nav-container">
+        <nav class="container">
             <!-- Logo -->
-            <div class="logo"><span>Ethan</span></div>
+            <div class="logo">Ethan</div>
 
-            <div class="links">
+            <div class="nav-links">
                 <div class="link"><a href="#home">Home</a></div>
                 <div class="link"><a href="#about">About</a></div>
                 <div class="link"><a href="#projects">Projects</a></div>
@@ -30,57 +30,62 @@
             </div>
         </nav>
     </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home">
+            <div class="container">
+                <div class="home-content">
+                    <div class="home-left">
+                        <img src="images/ethan1.png" alt="Ethan Levesque - Software Engineer">
+                    </div>
 
-    <!-- Home Page -->
-    <section>
-        <div class="home" id="home">
-            <div class="image">
-                <img src="images/ethan1.png" alt="">"
+                    <div class="home-right">
+                        <h1>
+                            Hi, I'm 
+                            <span>Ethan</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <div class="typewriter">
+                            I'm a
+                            <span id="typewriter-text" class="typewriter-text"> </span>
+                            <label for=""> | </label>
+                        </div>
+
+                        <p>
+                            I am a full stack developer with experience building games, programs, and websites including this portfolio
+                        </p>
+
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/ethanlev" class="github" target="_blank"> 
+                                        <i class="fa fa-github icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@EthanLevDev" class="youtube" target="_blank"> 
+                                        <i class="fa fa-youtube-play icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/ethanlevdev/" class="linkedin" target="_blank"> 
+                                        <i class="fa fa-linkedin icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btn">
+                            <button onclick="location.href='#projects'">View My Work</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="content">
-                <h1 data-aos="fade-left">
-                    Hi, I'm
-                    <span> Ethan </span>
-                </h1>
-
-                <!-- Description -->
-                <div class="typewriter">
-                    I'm a
-                    <span id="typewriter-text" class="typewriter-text"> </span>
-                    <label for=""> | </label>
-                </div>
-
-                <p>
-                    I am a full stack developer with experience building games, programs, and websites including this portfolio.
-                </p>
-
-                <!-- Social Buttons -->
-                <div class="social-links">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/ethanlev" class="github" target="_blank"> 
-                                <i class="fa fa-github icon"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/@EthanLevDev" class="youtube" target="_blank"> 
-                                <i class="fa fa-youtube-play icon"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ethanlevdev/" class="linkedin" target="_blank"> 
-                                <i class="fa fa-linkedin icon"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Contact Button -->
-                <div class="btn">
-                    <button onclick="location.href='#contact'">Contact Me</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- About Me -->
     <section class="about" id="about">
