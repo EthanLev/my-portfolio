@@ -574,3 +574,15 @@ footer .text span a {
 footer .text span a:hover {
     text-decoration: underline;
 }
+
+/* FADE-IN ANIMATION */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;              /* Start invisible */
+        transform: translateY(30px); /* Start below */
+    }
+    to {
+        opacity: 1;              /* End fully visible */
+        transform: translateY(0); /* End in position */
+    }
+}
