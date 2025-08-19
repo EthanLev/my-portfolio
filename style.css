@@ -1,5 +1,5 @@
 /* ===========================
-   Global Styles & Resets
+   GLOBAL STYLES AND RESETS
    =========================== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -23,6 +23,7 @@ body{
 section{
     min-height: 100vh; /* Full viewport height */
     padding: 80px 0 40px; /* Top padding for fixed header */
+    position: relative;
 }
 
 .container{
@@ -31,18 +32,20 @@ section{
     padding: 0 40px; /* Add some padding on the sides */
 }
 
-header{
-    background-color: #37444b;
-    position: fixed; /* Keeps header at top of screen when scrolling */
-    top: 0; /* Position at top of screen */
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
+.content{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1.25rem);
+    margin: 10px 0;
+}
+
+
 /* ===========================
-   Button Styles
+   BUTTON STYLES
    =========================== */
 button{
     width: auto;
@@ -57,7 +60,7 @@ button{
     font-size: 1.25rem;
     font-weight: 700;
     transition: 0.3s linear;
-    animation: fadeInUp 1s ease 0.9s both; 
+    animation: fadeInUp 1s ease 2s both; 
     cursor: pointer;
 }
 
@@ -76,29 +79,41 @@ button:hover{
 }
 
 /* ===========================
-   Custom Scroll Bar
+   CUSTOM SCROLL BAR
    =========================== */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(85, 84, 84); 
+    background: rgb(85, 84, 84, 0.3); 
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4b6977; 
+    background: linear-gradient(180deg, #4b6977, #8eb1c2); 
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #617d8b; 
+    background: linear-gradient(180deg, #4b6977, #8eb1c2);
 }
 
 /* ===========================
-   Navigation Bar
+   HEADER AND NAVIGATION
    =========================== */
+header{
+    background-color: #37444b;
+    position: fixed; /* Keeps header at top of screen when scrolling */
+    top: 0; /* Position at top of screen */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
 nav{
     display: flex;
     justify-content: space-between; /* Logo left, links right */
@@ -112,6 +127,7 @@ nav{
     font-weight: bold;
     color: #779eb2;
     text-shadow: 0 0 12px #8eb1c2;
+    transition: all 0.3s ease;
 }
 
 /* NAVIGATION MENU */
@@ -124,7 +140,9 @@ nav{
     color: #ffffff;
     font-weight: 550;
     font-size: 1.3rem;
-    transition: all 0.5s ease;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
 }
 
 .nav-links a:hover{
@@ -132,14 +150,8 @@ nav{
     color: #779eb2;
 }
 
-/* SECTION */
-section{
-    min-height: 100vh; /* Full viewport height */
-    padding: 80px 0 40px; /* Top padding for fixed header */
-}
-
 /* ===========================
-   Home Page
+   HOME SECTION
    =========================== */
 #home{
     display: flex;
@@ -165,6 +177,9 @@ section{
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Dramatic shadow */
     border: 5px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
     overflow: hidden; /* Ensure image stays within circle */
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 .home-content .home-left img{
@@ -183,10 +198,11 @@ section{
     align-items: center;
 }
 
+/* Home Title */
 .home-content .home-right h1{
     font-size: 3.5rem;    
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-    animation: fadeInUp 2s ease;
+    animation: fadeInUp 1s ease 0.5s both;
 }
 
 .home-content .home-right h1 span{
@@ -194,28 +210,36 @@ section{
     text-shadow: 0 0 15px #8eb1c2;
 }
 
+/* Home Paragraph */
 .home-content .home-right p{
     font-size: 1.5rem;
     opacity: 0.9;
     margin: 10px 0; /* Need? */
+    animation: fadeInUp 1s ease 1s both;
 }
 
 /* ===========================
-   Typewriter Effect Styling
+   TYPEWRITER EFFECT
    =========================== */
-.home-content .typewriter{
+.typewriter{
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
+    animation: fadeInUp 1s ease 0.5s both;
+    margin: 1rem 0;
 }
 
-.home-content .typewriter-text{
+.typewriter-text{
+    background: linear-gradient(90deg, #779eb2, #8eb1c2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: #779eb2;
     text-shadow: 0 0 10px #8eb1c2;
 }
 
 .typewriter label{
     animation: blink 1s step-end infinite;
-    color: white
+    color: white;
+    font-weight: 300;
 }
 
 @keyframes blink{
@@ -223,28 +247,23 @@ section{
     50% { opacity: 0; }
 }
 
-.content p{
-    font-size: clamp(0.4rem, 0.2rem + 9vw, 1.25rem);
-    margin: 10px 0;
-}
-
 /* ===========================
-   Social Links
+   SOCIAL LINKS
    ===========================
    - Animated icon backgrounds and brand colors
 */
 .social-links{
     display: flex;
     gap: 1.5rem; /* Space between icons */
-    animation: fadeInUp 1s ease 0.7s both; 
+    animation: fadeInUp 1s ease 1.5s both; 
 }
 
 .social-links ul{
-    padding-top: 25px;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .social-links ul li{
@@ -255,15 +274,15 @@ section{
     width: 90px;
     height: 90px;
     background-color: white;
-    text-align: center;
-    line-height: 85px;
-    font-size: 40px;
-    margin: 0 10px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 3px solid white;
+    transition: all 0.4s ease;
     z-index: 1;
 }
 
@@ -271,6 +290,7 @@ section{
     position: relative;
     color: #262626;
     transition: .5s;
+    font-size: 40px;
     z-index: 3;
 }
 
@@ -289,7 +309,7 @@ section{
     width: 100%;
     height: 100%;
     background: red;
-    transition: .5s;
+    transition: all 0.5s;
     z-index: 2;
 }
 
@@ -315,7 +335,7 @@ section{
 }
 
 /* ===========================
-   About Section
+   ABOUT SECTION
    =========================== */
 section .content {
     width: 80%;
