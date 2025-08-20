@@ -97,28 +97,55 @@ section .title span::after {
 /* ===========================
    BUTTON STYLES
    =========================== */
-button{
-    width: auto;
+button {
     min-width: 200px;
-    height: 6vh;
-    margin: 30px;
-    color: white;
-    background-color: #4d6b7a;
+    height: 60px;
+    padding: 12px 24px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4d6b7a, #365563);
     border: none;
-    outline: none;
-    border-radius: 15px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    transition: 0.3s linear;
-    animation: fadeInUp 1s ease 2s both; 
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: inherit;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-button:hover{
-    transform: scale(1.1);
-    background-color: #365563;
+/* Button hover effects */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(119, 158, 178, 0.3);
     border: 2px solid #779eb2;
-    box-shadow: 0 0 12px #8eb1c2;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Button container centering */
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .content .btn{
@@ -195,10 +222,27 @@ nav{
     padding: 0.5rem 0;
 }
 
-.nav-links a:hover{
-    text-shadow: 0 0 8px #8eb1c2;
-    color: #779eb2;
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #779eb2;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #779eb2;
+    text-shadow: 0 0 8px rgba(135, 158, 178, 0.6);
+}
+
 
 /* ===========================
    HOME SECTION
@@ -369,21 +413,10 @@ nav{
 }
 
 /* Brand-specific background colors for social icons */
-.social-links .youtube:before {
-    background-color: #dd0000;
-}
-
-.social-links .linkedin:before {
-    background-color: #0075b4;
-}
-
-.social-links .github:before {
-    background-color: #424242;
-}
-
-.social-links .artstation:before {
-    background-color: #0075b4;
-}
+.social-links .youtube::before { background: linear-gradient(180deg, #ff7a7a, #cc0000); }
+.social-links .linkedin::before { background: linear-gradient(180deg, #7094a8, #005885); }
+.social-links .github::before { background: linear-gradient(180deg, #505050, #111111); }
+.social-links .artstation::before { background: linear-gradient(135deg, #13aff0, #0a7cb8); }
 
 /* ===========================
    ABOUT SECTION
