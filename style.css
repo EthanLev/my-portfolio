@@ -20,14 +20,65 @@ body{
     background-color: #29343a;
 }
 
+/* SECTIONS */
 section{
     min-height: 100vh; /* Full viewport height */
     padding: 80px 0 40px; /* Top padding for fixed header */
     position: relative;
 }
 
+section .title {
+    font-size: 2.5rem;     
+    margin-bottom: 2rem;   
+    color: #779eb2;     
+    text-align: center;
+    justify-content: center;
+}
+
+section .title span {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .topic {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+section .button {
+    margin: 16px 0;
+}
+
+section .button button {
+    padding: 8px 16px;
+}
+
+/* Underline effect for section titles */
+section .title span::before, 
+section .title span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .container{
-    max-width: 1200px; /* Don't let content get too wide on large screens */
+    max-width: 1500px; /* Don't let content get too wide on large screens */
     margin: 0 auto; /* Center the container horizontally */
     padding: 0 40px; /* Add some padding on the sides */
 }
@@ -35,14 +86,13 @@ section{
 .content{
     width: 80%;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1.25rem);
     margin: 10px 0;
 }
-
 
 /* ===========================
    BUTTON STYLES
@@ -178,6 +228,7 @@ nav{
     border: 5px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
     overflow: hidden; /* Ensure image stays within circle */
     display: flex;
+    align-items: center;
     justify-content: center;
     font-size: 1.5rem;
 }
@@ -337,51 +388,10 @@ nav{
 /* ===========================
    ABOUT SECTION
    =========================== */
-section .content {
-    width: 80%;
-    margin: 0px auto;
-    font-family: 'Poppins', sans-serif;
-}
-
 .about .about-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-section .title {
-    font-size: 2.5rem;     
-    margin-bottom: 2rem;   
-    color: #779eb2;     
-    text-align: center;
-    justify-content: center;
-}
-
-section .title span {
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 8px;
-}
-
-/* Underline effect for section titles */
-section .title span::before, 
-section .title span::after {
-    content: '';
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: white;
-    left: 0;
-    bottom: 0;
-}
-
-section .title span::after {
-    bottom: -7px;
-    width: 70%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .about .about-details .left {
@@ -399,31 +409,14 @@ section .title span::after {
     width: 55%;
 }
 
-section .topic {
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
 .about-details .right p {
     text-align: justify;
     color: white;
 }
 
-section .button {
-    margin: 16px 0;
-}
-
-section .button button {
-    padding: 8px 16px;
-}
-
 /* ===========================
    Projects Section
-   ===========================
-   - Card hover effect for elevation and image pop
-*/
+   =========================== */
 .card-container{
     display: flex;
     justify-content: center;
