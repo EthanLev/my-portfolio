@@ -429,10 +429,12 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
 }
 
 .about .about-details .left {
     width: 45%;
+    flex-shrink: 0;
 }
 
 .about .left img {
@@ -469,7 +471,7 @@ nav{
 
 .card{
     width: 325px;
-    background-color: #536269;
+    background: linear-gradient(180deg, #37444b 0%, #536269 100%);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
@@ -478,7 +480,7 @@ nav{
 }
 
 .card:hover {
-    transform: translateY(-12px) scale(1.03);
+    transform: translateY(-6px) scale(1.01);
     box-shadow: 0 8px 32px #8eb1c2;
 }
 
@@ -529,6 +531,8 @@ nav{
 
 .skills .boxes {
     display: grid;
+    flex-wrap: wrap;
+    align-items: flex-start;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 2rem;
 }
@@ -537,6 +541,7 @@ nav{
     background: linear-gradient(180deg, #37444b 0%, #536269 100%);
     padding: 2rem;
     border-radius: 15px;
+    height: auto;
     color: white;
     text-align: center;
     transition: transform 0.3s ease;
@@ -563,7 +568,7 @@ nav{
 }
 
 .skill-list{
-    list-style: none;;
+    list-style: none;
 }
 
 .skill-list li{
@@ -572,12 +577,13 @@ nav{
     padding: 0.5rem;
     border-radius: 10px;
     backdrop-filter: blur(10px);
+    min-height: auto;
 }
 
 .stars {
-  color: #e5ebec;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
+    color: #ececec;
+    font-size: 1rem;
+    letter-spacing: 2px;
 }
 
 /* ===========================
@@ -634,5 +640,143 @@ footer .text span a:hover {
     to {
         opacity: 1;              /* End fully visible */
         transform: translateY(0); /* End in position */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* Skills boxes stack at half-screen PC size */
+    .skills .boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* Skills boxes single column at tablet size */
+    .skills .boxes {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* About Section - Stack vertically on mobile */
+    .about .about-details {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .about .about-details .left,
+    .about .about-details .right {
+        width: 100%;
+    }
+    
+    .about .left img {
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Skills Section - Smaller on mobile */
+    .skill-list li {
+        padding: 0.6rem;
+        gap: 0.4rem;
+    }
+    
+    .skill-list li .skill-name {
+        font-size: 0.9rem;
+        gap: 0.6rem;
+    }
+    
+    .skill-list li i {
+        font-size: 1.5rem;
+    }
+    
+    .stars {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Home section - Stack vertically on mobile */
+    .home-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .home-content .home-left {
+        max-width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Navigation - Improve mobile nav */
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+    
+    /* Typography adjustments for mobile */
+    .home-content .home-right h1 {
+        font-size: 2.5rem;
+    }
+    
+    section .title span {
+        font-size: 2rem;
+    }
+    
+    .typewriter {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra small screens */
+    .skill-list li {
+        padding: 0.5rem;
+        gap: 0.3rem;
+    }
+    
+    .skill-list li .skill-name {
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+    
+    .skill-list li i {
+        font-size: 1.3rem;
+    }
+    
+    .stars {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .about .left img {
+        height: 250px;
+        width: 250px;
+    }
+    
+    .home-content .home-left {
+        max-width: 250px;
+        height: 250px;
+    }
+    
+    .home-content .home-right h1 {
+        font-size: 2rem;
+    }
+    
+    /* Container padding for very small screens */
+    .container {
+        padding: 0 10px;
+    }
+    
+    .content {
+        width: 95%;
     }
 }
