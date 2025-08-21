@@ -714,9 +714,14 @@ footer .text span a:hover {
 
     .home-content .home-left img {
         transform: scale(1.5) translateY(80px);
+        object-position: center bottom;
     }
     
     /* Navigation - Improve mobile nav */
+    nav .logo{
+        font-size: 1.5rem;
+    }
+
     .nav-links {
         gap: 1.5rem;
         flex-wrap: wrap;
@@ -724,7 +729,7 @@ footer .text span a:hover {
     }
     
     .nav-links a {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
     
     /* Typography adjustments for mobile */
