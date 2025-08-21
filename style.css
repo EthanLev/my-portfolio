@@ -761,6 +761,10 @@ footer .text span a:hover {
         height: 250px;
         width: 250px;
     }
+
+    .home .content{
+        padding-top: 3rem;
+    }
     
     .home-content .home-left {
         max-width: 250px;
