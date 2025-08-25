@@ -201,19 +201,13 @@ nav{
     padding: 1rem 0; /* Add vertical padding */
 }
 
-/* LOGO */
-.logo{
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #779eb2;
-    text-shadow: 0 0 12px #8eb1c2;
-    transition: all 0.3s ease;
-}
-
 /* NAVIGATION MENU */
 .nav-links{
     display: flex;
-    gap: 2.5rem; /* Space between links */
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center; 
+    margin: 1rem auto;
 }
 
 .nav-links a{
@@ -769,10 +763,6 @@ footer .text span a:hover {
     }
     
     /* Navigation - Improve mobile nav */
-    nav .logo{
-        font-size: 1.5rem;
-    }
-
     .nav-links {
         gap: 1.5rem;
         flex-wrap: wrap;
