@@ -196,9 +196,9 @@ header{
 
 nav{
     display: flex;
-    justify-content: space-between; /* Logo left, links right */
+    justify-content: center; 
     align-items: center;   
-    padding: 1rem 0; /* Add vertical padding */
+    padding: 1rem 0; 
 }
 
 /* NAVIGATION MENU */
