@@ -1,2 +1,2 @@
 # MyPortfolio
-A personal portfolio built with HTML, CSS, and JavaScript, showcasing my coding projects, games, and design work.
+My personal portfolio built with HTML, CSS, and JavaScript, showcasing my coding projects, games, and design work.
