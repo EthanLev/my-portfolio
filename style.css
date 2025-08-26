@@ -464,7 +464,7 @@ nav{
 
 .card{
     width: 350px;
-    height: 700px;
+    height: 625px;
     background: linear-gradient(180deg, #37444b 0%, #536269 100%);
     border-radius: 8px;
     overflow: hidden;
@@ -521,12 +521,12 @@ nav{
 .project-btn{
     display: flex;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .project-btn button {
     height: 40px;
-    padding: 6px 16px;
+    padding: 6px 6px;
     font-size: 1rem;
 }
 
@@ -596,18 +596,19 @@ nav{
 .skill-list li:hover {
     background: rgba(119, 158, 178, 0.2);
     border-color: #779eb2;
-    transform: translateX(5px);
+    transform: translateX(5px) scale(1.02);
 }
 
-/* Left side */
 .skill-info {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    justify-content: center; 
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .skill-list li i {
-    font-size: 2rem;
+    font-size: 2.5em;
     color: #779eb2;
     width: 20px;
     text-align: center;
@@ -615,17 +616,16 @@ nav{
 }
 
 .skill-name {
-    flex: 1;
-    text-align: center;
     font-size: 1rem;
     font-weight: 500;
     color: white;
+    flex: 1;
+    text-align: center;
 }
 
-/* Right side */
 .stars {
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     flex-shrink: 0;
 }
