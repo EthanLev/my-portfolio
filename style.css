@@ -100,7 +100,7 @@ section .button button {
    BUTTON STYLES
    =========================== */
 button {
-    min-width: 200px;
+    min-width: 150px;
     height: 60px;
     padding: 12px 24px;
     color: #ffffff;
@@ -460,52 +460,81 @@ nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 2rem;
 }
 
 .card{
     width: 350px;
-    height: 625px;
     background: linear-gradient(180deg, #37444b 0%, #536269 100%);
-    border-radius: 8px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    margin: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    align-items: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(119, 158, 178, 0.2);
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #779eb2, transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
 }
 
 .card:hover {
-    transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 8px 32px #8eb1c2;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(119, 158, 178, 0.3);
+    border-color: #779eb2;
 }
 
 .card img{
-    width: 60%;
+    width: 80%;
     height: auto;
     transition: filter 0.3s;
     border: 4px solid #4b6977;
     background: #29343a;
     overflow: hidden;
     border-radius: 8px;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    display: block;
 }
 
-.card:hover img {
+.card-image img {
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
     filter: brightness(1.1) saturate(1.2);
 }
 
 .card .content{
-    padding: 16px;
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card .content h3{
-    font-size: 22px;
-    margin-bottom: 8px;
-    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: white;
-    transition: color 0.3s;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    transition: color 0.3s ease;
 }
 
 .card:hover .content h3 {
@@ -518,16 +547,69 @@ nav{
     line-height: 1.3;
 }
 
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
 .project-btn{
     display: flex;
     justify-content: center;
-    margin-top: 12px;
 }
 
 .project-btn button {
     height: 40px;
     padding: 6px 6px;
     font-size: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-tag {
+    background: rgba(119, 158, 178, 0.15);
+    color: #8eb1c2;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(119, 158, 178, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(119, 158, 178, 0.1), transparent);
+    transition: left 0.4s ease;
+}
+
+.tech-tag:hover::before {
+    left: 100%;
+}
+
+.tech-tag:hover {
+    background: rgba(119, 158, 178, 0.25);
+    border-color: #779eb2;
+    color: white;
+    transform: translateY(-1px) scale(1.05);
 }
 
 /* ===========================
