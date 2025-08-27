@@ -53,3 +53,24 @@ window.onload = function () {
   // Start the typing effect
   type();
 };
+
+let isDetailed = false; // Skills section detailed view 
+  
+// Skills section detailed view toggle 
+function toggleLayout() {
+    const categorizedLayout = document.getElementById('categorizedLayout');
+    const detailedLayout = document.getElementById('detailedLayout');
+    const toggleBtn = document.querySelector('.toggle-btn');
+
+    if (isDetailed) {
+        categorizedLayout.classList.remove('hidden');
+        detailedLayout.classList.add('hidden');
+        toggleBtn.textContent = 'Switch to Detailed View';
+        isDetailed = false;
+    } else {
+        categorizedLayout.classList.add('hidden');
+        detailedLayout.classList.remove('hidden');
+        toggleBtn.textContent = 'Switch to Category View';
+        isDetailed = true;
+    }
+}

@@ -168,116 +168,217 @@
         <!-- My Skills -->
         <section class="skills" id="skills">
             <div class="container">
-                <div class="content">
-                    <div class="title"> <span> My Skills </span> </div>
-                    <div class="skills-details">
+                <div class="title">
+                    <span>My Skills</span>
+                </div>
+                
+                <!-- Layout Toggle -->
+                <div class="layout-toggle">
+                    <button class="toggle-btn" onclick="toggleLayout()">Switch to Detailed View</button>
+                </div>
 
-                        <!-- Skills Boxes -->
-                        <div class="boxes">
-
-                            <!-- Languages -->
-                            <div class="box">
-                                <h3>Languages</h3>
-                                <ul class="skill-list">
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-java-plain-wordmark colored"></i>
-                                            <span class="skill-name">Java</span>
-                                        </div>
-                                        <div class="stars">★★★★☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-csharp-plain-wordmark colored"></i>
-                                            <span class="skill-name">C#</span>
-                                        </div>
-                                        <div class="stars">★★★☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-html5-plain-wordmark colored"></i>
-                                            <span class="skill-name">HTML</span>
-                                        </div>
-                                        <div class="stars">★★★☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-css3-plain-wordmark colored"></i>
-                                            <span class="skill-name">CSS</span>
-                                        </div>
-                                        <div class="stars">★★★☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-javascript-plain colored"></i>
-                                            <span class="skill-name">JavaScript</span>
-                                        </div>
-                                        <div class="stars">★★★☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-cplusplus-plain colored"></i>
-                                            <span class="skill-name">C++</span>
-                                        </div>
-                                        <div class="stars">★☆☆☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-c-original colored"></i>
-                                            <span class="skill-name">C</span>
-                                        </div>
-                                        <div class="stars">★☆☆☆☆</div>
-                                    </li>
-                                </ul>
+                <!-- Categorized Skills Layout (Default) -->
+                <div id="categorizedLayout" class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i> Programming Languages
+                        </h3>
+                        <div class="skills-tags">
+                            <div class="skill-tag">
+                                <i class="devicon-java-plain colored"></i>
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Advanced</span>
                             </div>
-
-                            <div class="box">
-                                <h3>Database</h3>
-                                <ul class="skill-list">
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-azuresqldatabase-plain colored"></i>
-                                            <span class="skill-name">SQL</span>
-                                        </div>
-                                        <div class="stars">★☆☆☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-firebase-plain-wordmark colored"></i>
-                                            <span class="skill-name">Firebase</span>
-                                        </div>
-                                        <div class="stars">★☆☆☆☆</div>
-                                    </li>
-                                </ul>
+                            <div class="skill-tag">
+                                <i class="devicon-csharp-plain colored"></i>
+                                <span class="skill-name">C#</span>
+                                <span class="skill-level">Intermediate</span>
                             </div>
-
-                            <div class="box">
-                                <h3>Tools</h3>
-                                <ul class="skill-list">
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-github-original-wordmark colored"></i>
-                                            <span class="skill-name">GitHub</span>
-                                        </div>
-                                        <div class="stars">★★★☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-unity-plain colored"></i>
-                                            <span class="skill-name">Unity</span>
-                                        </div>
-                                        <div class="stars">★★★☆☆</div>
-                                    </li>
-                                    <li>
-                                        <div class="skill-info">
-                                            <i class="devicon-unrealengine-original colored"></i>
-                                            <span class="skill-name">Unreal Engine</span>
-                                        </div>
-                                        <div class="stars">★★☆☆☆</div>
-                                    </li>
-                                </ul>
+                            <div class="skill-tag">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="devicon-cplusplus-plain colored"></i>
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">Beginner</span>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Web Technologies -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-globe"></i> Web Technologies
+                        </h3>
+                        <div class="skills-tags">
+                            <div class="skill-tag">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="devicon-css3-plain colored"></i>
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database & Backend -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-database"></i> Database & Backend
+                        </h3>
+                        <div class="skills-tags">
+                            <div class="skill-tag">
+                                <i class="devicon-azuresqldatabase-plain colored"></i>
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="devicon-firebase-plain colored"></i>
+                                <span class="skill-name">Firebase</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Development -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-gamepad"></i> Game Development
+                        </h3>
+                        <div class="skills-tags">
+                            <div class="skill-tag">
+                                <i class="devicon-unity-plain colored"></i>
+                                <span class="skill-name">Unity</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="devicon-unrealengine-original colored"></i>
+                                <span class="skill-name">Unreal Engine</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design & 3D -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-cube"></i> Design & 3D
+                        </h3>
+                        <div class="skills-tags">
+                            <div class="skill-tag">
+                                <i class="devicon-blender-original colored"></i>
+                                <span class="skill-name">Blender</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Version Control -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-tools"></i> Tools & Version Control
+                        </h3>
+                        <div class="skills-tags">
+                            <div class="skill-tag">
+                                <i class="devicon-github-original colored"></i>
+                                <span class="skill-name">GitHub</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Skills Layout (Hidden by default) -->
+                <div id="detailedLayout" class="skills-compact hidden">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-java-plain-wordmark colored"></i>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-csharp-plain-wordmark colored"></i>
+                            <span class="skill-name">C#</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-html5-plain-wordmark colored"></i>
+                            <span class="skill-name">HTML</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-css3-plain-wordmark colored"></i>
+                            <span class="skill-name">CSS</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                            <span class="skill-name">C++</span>
+                        </div>
+                        <div class="stars">★☆☆☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-azuresqldatabase-plain colored"></i>
+                            <span class="skill-name">SQL</span>
+                        </div>
+                        <div class="stars">★☆☆☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-firebase-plain-wordmark colored"></i>
+                            <span class="skill-name">Firebase</span>
+                        </div>
+                        <div class="stars">★☆☆☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-github-original-wordmark colored"></i>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-unity-plain colored"></i>
+                            <span class="skill-name">Unity</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-unrealengine-original colored"></i>
+                            <span class="skill-name">Unreal Engine</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <i class="devicon-blender-original colored"></i>
+                            <span class="skill-name">Blender</span>
+                        </div>
+                        <div class="stars">★★★☆☆</div>
                     </div>
                 </div>
             </div>
