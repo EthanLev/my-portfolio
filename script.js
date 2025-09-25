@@ -1,5 +1,5 @@
 window.onload = function () {
-  const words = ["Full Stack Developer", "Java Programmer", "Game Developer"];
+  const words = ["Full Stack Developer", "Game Developer"];
 
   const typingSpeed = 100;
   const deletingSpeed = 50;
